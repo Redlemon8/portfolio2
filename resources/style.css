@@ -334,7 +334,7 @@ body {
     width: 10%;
 }
 
-/* PAD SIZE */
+/* PAD & PHONE SIZE */
 
 @media screen and (max-width: 1120px) {
     .page {
