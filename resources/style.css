@@ -43,7 +43,7 @@ body {
     margin: 1rem 1rem 1rem 0;
 }
 
-.block-top, .block-bottom {
+.block-top, .block-bottom{
     border: 1px solid black;
     height: 46%;
     margin: 1rem;
@@ -289,6 +289,8 @@ body {
 }
 
 .text p {
+    overflow: auto;
+    white-space: normal;
     margin: 0;
 }
 
@@ -303,20 +305,38 @@ body {
 
 /* ABOUT SECTION */
 
-.knowleges {
-    height: 42%;
-    margin: 1rem;
-    border: 1px solid #414042;
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.languages img {
+.knowleges, .notions, .contact{
+    margin-bottom: 0.5rem;
+    margin: 1rem;
+    border: 1px solid black;
+    height: 30%;
+}
+
+.knowleges h3, .knowleges img {
+    margin: 0 0 0 1rem;
+}
+
+.notions h3, .notions img {
+    margin: 0 0 0 1rem;
+}
+
+.contact img {
+    margin: 0.5rem 0 0 1rem;
+}
+
+.knowleges img, .notions img, .contact img {
     width: 10%;
 }
 
-
 /* PAD SIZE */
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1120px) {
     .page {
         flex-direction: column;
         height: auto;
@@ -364,21 +384,94 @@ body {
         width: 100%;
     }
 
-    .block-top {
-        height: 50%;
-        width: 50%;
-    }
-
-    .block-bottom {
+    .block-top, .block-bottom {
         height: 50%;
         width: 50%;
     }
 }
 
 
+@media screen and (max-width: 1000px) {
+    .project {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .text {
+        width: 100%;
+    }
 
+    .text p {
+        overflow: visible;
+    }
+}
 
+@media screen and (max-width: 880px) {
+    .profil img {
+        width: 25%;
+        height: 35%;
+    }
 
+    .title {
+        bottom: 2rem;
+    }
+    .left-box, .middle-box, .right-box {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-right: 1rem;
+    }
 
+    .block-top, .block-bottom {
+        width: 100%;
+    }
 
+    .image {
+        width: 100%;
+    }
+}
 
+@media screen and (max-width: 415px) {
+    
+    .title {
+        width: 0%;
+    }
+    
+    .title h1{
+        font-size: 2rem;
+    }
+
+    .profil img {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
+    .profil img {
+        display: none;
+    }
+
+    .profil {
+        width: 40%;
+    }
+
+    .title {
+        margin-right: 2rem;
+        width: 0%;
+    }
+
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .border::before, .border::after {
+        bottom: -12rem;
+    }
+
+    #openPopupLink {
+        margin-bottom: 0.5rem;
+    }
+}
+
+   
