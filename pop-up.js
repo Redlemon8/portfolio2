@@ -4,7 +4,6 @@ const closePopup = document.getElementById('closePopup');
 
 openPopupLink.addEventListener('click', function() {
     popupContainer.style.display = 'block'; // Affiche la pop-up
-    popupContainer.style.width = 'min 250px';
 });
 
 closePopup.addEventListener('click', function() {
